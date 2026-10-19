@@ -39,6 +39,10 @@ class MainActivity : ComponentActivity() {
         ActivityResultContracts.RequestPermission()
     ) {}
 
+    private val localNetworkPerm = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted -> android.util.Log.i("MainActivity", "ACCESS_LOCAL_NETWORK granted=$isGranted") }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (android.os.Build.VERSION.SDK_INT >= 33) {
