@@ -18,3 +18,4 @@ spore-release.jks
 
 # Logs
 *.log
+keystore.properties
